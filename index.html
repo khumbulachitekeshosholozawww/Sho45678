@@ -1,21 +1,711 @@
-onstruction</strong>.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shosholoza Construction | Cape Town</title>
+
+  <meta name="description" content="Shosholoza Construction provides quality carpentry, building, plastering, painting, roofing, tiling, plumbing and electrical services in Cape Town.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f5a623;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f5a623;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      color: #f5a623;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      margin: 6px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #f5a623;
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      background: #ffbd4a;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 5%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    .section-text {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #555;
+    }
+
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: #f8f8f8;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .service-icon {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .service-card p {
+      color: #666;
+    }
+
+    .about {
+      background: #eee;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      min-height: 350px;
+      border-radius: 12px;
+      object-fit: cover;
+      background:
+        url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80")
+        center/cover no-repeat;
+    }
+
+    .about-content h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .why-us {
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .why-card h3 {
+      margin: 10px 0;
+    }
+
+    .gallery {
+      background: #eee;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact-info {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-item {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    .contact-item a {
+      color: #f5a623;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer strong {
+      color: #f5a623;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">Shosholoza Construction</div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>Shosholoza Construction</h1>
+
+      <h2>Quality Construction & Building Services in Cape Town</h2>
+
+      <p>
+        Professional workmanship for homes, businesses and building projects.
+        We build, renovate and improve properties with care and quality.
+      </p>
+
+      <a href="#services" class="btn btn-primary">
+        View Our Services
+      </a>
+
+      <a
+        href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction,%20I%20would%20like%20a%20quote."
+        class="btn btn-whatsapp"
+        target="_blank"
+      >
+        WhatsApp Us
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <h2 class="section-title">Our Services</h2>
+
+      <p class="section-text">
+        We provide reliable construction and property improvement services
+        throughout Cape Town and surrounding areas.
+      </p>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🪚</div>
+          <h3>Carpentry</h3>
+          <p>
+            Custom woodwork, doors, frames, cupboards, repairs and other
+            carpentry projects.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🧱</div>
+          <h3>Building</h3>
+          <p>
+            Building work, extensions, renovations, walls and general
+            construction projects.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Roofing</h3>
+          <p>
+            Roof installation, repairs, maintenance and improvements.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Plastering & Skimming</h3>
+          <p>
+            Smooth and professional wall finishes for new and renovated
+            properties.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🖌️</div>
+          <h3>Painting</h3>
+          <p>
+            Interior and exterior painting to give your property a clean,
+            modern finish.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔲</div>
+          <h3>Tiling</h3>
+          <p>
+            Floor and wall tiling for kitchens, bathrooms and other areas.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Electrical Work</h3>
+          <p>
+            General electrical installation and maintenance services.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚰</div>
+          <h3>Plumbing</h3>
+          <p>
+            Plumbing installation, repairs and maintenance for homes and
+            businesses.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🪵</div>
+          <h3>Decking</h3>
+          <p>
+            Outdoor decking installation, repairs and finishing.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Renovations</h3>
+          <p>
+            Property renovations and improvements from small jobs to larger
+            projects.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <h2 class="section-title">About Shosholoza Construction</h2>
+
+      <div class="about-grid">
+
+        <div class="about-image"></div>
+
+        <div class="about-content">
+
+          <h3>Building With Quality and Pride</h3>
+
+          <p>
+            Shosholoza Construction provides construction and building
+            services for customers in Cape Town and surrounding areas.
+          </p>
+
+          <p>
+            Our services include carpentry, building, plastering, skimming,
+            painting, roofing, tiling, plumbing, electrical work and decking.
+          </p>
+
+          <p>
+            We focus on quality workmanship, good communication and reliable
+            service for every project.
+          </p>
+
+          <a
+            href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction,%20I%20would%20like%20to%20discuss%20a%20building%20project."
+            class="btn btn-whatsapp"
+            target="_blank"
+          >
+            Talk To Us on WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+
+    <div class="container">
+
+      <h2 class="section-title">Why Choose Us?</h2>
+
+      <p class="section-text">
+        We aim to make every construction project simple, professional and
+        satisfying for our customers.
+      </p>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="service-icon">⭐</div>
+          <h3>Quality Work</h3>
+          <p>
+            We take pride in delivering neat and quality workmanship.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="service-icon">🤝</div>
+          <h3>Reliable Service</h3>
+          <p>
+            We communicate with customers and work hard to meet project needs.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Many Services</h3>
+          <p>
+            From carpentry and building to painting, plumbing and roofing.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="service-icon">📍</div>
+          <h3>Cape Town</h3>
+          <p>
+            Serving customers in Cape Town and surrounding areas.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+
+    <div class="container">
+
+      <h2 class="section-title">Our Work</h2>
+
+      <p class="section-text">
+        Examples of construction, carpentry and building work.
+      </p>
+
+      <div class="gallery-grid">
+
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80"
+          alt="Construction work"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80"
+          alt="Building construction"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
+          alt="Carpentry and interior work"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+          alt="Building project"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=80"
+          alt="Construction site"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1562259949-e8e7680d7820?auto=format&fit=crop&w=900&q=80"
+          alt="Painting work"
+        >
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <h2 class="section-title">Contact Us</h2>
+
+      <div class="contact-info">
+
+        <p class="section-text" style="color:#ddd;">
+          Need a quote or want to discuss your project?
+          Contact Shosholoza Construction today.
+        </p>
+
+        <div class="contact-item">
+          📱 WhatsApp:
+          <a
+            href="https://wa.me/27849139531"
+            target="_blank"
+          >
+            +27 84 913 9531
+          </a>
+        </div>
+
+        <div class="contact-item">
+          📍 Cape Town, Western Cape, South Africa
+        </div>
+
+        <div class="contact-item">
+          🏠 14–36 Vilakazi Road, Masiphumelele, Side 5,
+          Fish Hoek, Cape Town
+        </div>
+
+        <br>
+
+        <a
+          href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction,%20I%20would%20like%20a%20quote."
+          class="btn btn-whatsapp"
+          target="_blank"
+        >
+          📱 Request a Quote on WhatsApp
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 <strong>Shosholoza Construction</strong>.
       All Rights Reserved.
     </p>
 
     <p>
-      Cape Town, Western Cape, South Africa
+      Quality Construction & Building Services in Cape Town.
     </p>
+
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a class="whatsapp"
-     href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction,%20I%20would%20like%20to%20make%20an%20enquiry."
-     target="_blank"
-     aria-label="Contact Shosholoza Construction on WhatsApp">
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction,%20I%20need%20your%20services."
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Contact Shosholoza Construction on WhatsApp"
+  >
     ☎
   </a>
 
 </body>
 </html>
-Hongu. Iyi ndiyo full code yewebsite ye Shosholoza Construction, ine services, About, Contact, WhatsApp button, uye community messages. Copy yese woisa mu index.html.
-HTML
