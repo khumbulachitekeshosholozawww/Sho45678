@@ -1,566 +1,187 @@
+Writing
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shosholoza Construction - Professional building and construction services in Cape Town.">
+<title>Shosholoza Construction | Cape Town</title>
 
-  <title>Shosholoza Construction | Cape Town Building Services</title>
-
-  <meta name="description" content="Shosholoza Construction provides professional building, carpentry, plastering, painting, roofing, plumbing, electrical, tiling and decking services in Cape Town.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #f7f7f7;
-    }
-
-    header {
-      background: #111;
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: #f5a400;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #f5a400;
-    }
-
-    .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 60px 20px;
-      background:
-        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      color: #f5a400;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #f5a400;
-      color: #111;
-      padding: 14px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px;
-    }
-
-    .btn:hover {
-      background: white;
-    }
-
-    section {
-      padding: 70px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      color: #111;
-    }
-
-    .section-title p {
-      color: #666;
-      margin-top: 8px;
-    }
-
-    .about {
-      background: white;
-      text-align: center;
-    }
-
-    .about-content {
-      max-width: 900px;
-      margin: auto;
-      font-size: 18px;
-    }
-
-    .services {
-      background: #f1f1f1;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-
-    .service {
-      background: white;
-      padding: 30px 20px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-      transition: .3s;
-    }
-
-    .service:hover {
-      transform: translateY(-7px);
-    }
-
-    .service .icon {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .service h3 {
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    .service p {
-      color: #666;
-    }
-
-    .projects {
-      background: white;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,.15);
-    }
-
-    .why {
-      background: #111;
-      color: white;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      text-align: center;
-    }
-
-    .why-box {
-      padding: 25px;
-    }
-
-    .why-box h3 {
-      color: #f5a400;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      background: #f1f1f1;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .contact-card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-    }
-
-    .contact-card h3 {
-      margin-bottom: 15px;
-      color: #111;
-    }
-
-    .contact-card p {
-      margin-bottom: 10px;
-    }
-
-    .contact-card a {
-      color: #111;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #25D366;
-      color: white;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      font-size: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.3);
-      z-index: 2000;
-    }
-
-    .whatsapp:hover {
-      transform: scale(1.08);
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav a {
-        margin: 0 7px;
-        font-size: 14px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      section {
-        padding: 55px 5%;
-      }
-    }
-  </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#222;background:#f5f5f5}
+header{background:#111;color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+.logo{font-size:24px;font-weight:bold;color:#f5b400}
+nav a{color:white;text-decoration:none;margin-left:18px;font-weight:bold}
+nav a:hover{color:#f5b400}
+.hero{min-height:80vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80") center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:40px 20px}
+.hero h1{font-size:clamp(38px,7vw,70px);margin-bottom:15px}
+.hero p{font-size:21px;max-width:750px;margin:auto}
+.btn{display:inline-block;background:#f5b400;color:#111;padding:14px 25px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:25px}
+.btn:hover{background:#fff}
+section{padding:70px 6%;background:white}
+.section-title{text-align:center;font-size:36px;margin-bottom:15px;color:#111}
+.section-text{text-align:center;max-width:800px;margin:0 auto 40px;color:#555}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:#f8f8f8;border-radius:12px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-content{padding:20px}
+.card h3{color:#111;margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.gallery img{width:100%;height:230px;object-fit:cover;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+.about{background:#111;color:white}
+.about .section-title{color:#f5b400}
+.contact{background:#f1f1f1}
+.contact-box{max-width:800px;margin:auto;background:white;padding:35px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.contact-item{margin:18px 0;font-size:18px}
+.contact-item strong{display:block;color:#f5a900}
+footer{background:#111;color:white;text-align:center;padding:30px 15px}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:white;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:30px;font-weight:bold;box-shadow:0 5px 20px rgba(0,0,0,.3);z-index:2000}
+@media(max-width:700px){
+header{flex-direction:column;gap:10px}
+nav a{margin:0 6px;font-size:13px}
+.hero{min-height:70vh}
+section{padding:55px 5%}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">SHOSHOLOZA <span>CONSTRUCTION</span></div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<div class="logo">SHOSHOLOZA CONSTRUCTION</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Quality <span>Construction</span> & Building Services</h1>
+<div>
+<h1>Shosholoza Construction</h1>
+<p>Quality Construction & Building Services in Cape Town</p>
+<p>Professional workmanship. Reliable service. Quality results.</p>
+<a class="btn" href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction%2C%20I%20would%20like%20a%20quotation." target="_blank">💬 Get a WhatsApp Quote</a>
+</div>
+</section>
 
-    <p>
-      Professional construction and building services in Cape Town,
-      Western Cape.
-    </p>
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<p class="section-text">We provide professional construction and property improvement services throughout Cape Town.</p>
 
-    <a class="btn" href="https://wa.me/27849139531" target="_blank">
-      💬 WhatsApp Us
-    </a>
+<div class="services">
 
-    <a class="btn" href="#services">
-      Our Services
-    </a>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt="Building construction">
+<div class="card-content"><h3>🏗️ Building</h3><p>Professional building and construction work for homes and properties.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80" alt="Carpentry">
+<div class="card-content"><h3>🪚 Carpentry</h3><p>Quality carpentry, woodwork, doors, frames and general repairs.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Plastering">
+<div class="card-content"><h3>🧱 Plastering</h3><p>Professional plastering and wall finishing for a clean result.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Skimming">
+<div class="card-content"><h3>✨ Skimming</h3><p>Smooth wall and ceiling finishes ready for painting.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Decking">
+<div class="card-content"><h3>🌳 Decking</h3><p>Outdoor decking installation and timber construction.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Electrical work">
+<div class="card-content"><h3>⚡ Electrical Work</h3><p>General electrical installation and property electrical work.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=900&q=80" alt="Plumbing">
+<div class="card-content"><h3>🚿 Plumbing</h3><p>Plumbing installations, repairs and maintenance.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=900&q=80" alt="Tiling">
+<div class="card-content"><h3>🔲 Tiling</h3><p>Professional floor and wall tiling for homes and businesses.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80" alt="Painting">
+<div class="card-content"><h3>🎨 Painting</h3><p>Interior and exterior painting with neat professional finishes.</p></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=900&q=80" alt="Roofing">
+<div class="card-content"><h3>🏠 Roofing</h3><p>Roof repairs, maintenance and construction services.</p></div>
+</div>
+
+</div>
 </section>
 
 <section class="about" id="about">
-  <div class="section-title">
-    <h2>About Shosholoza Construction</h2>
-    <p>Building quality. Delivering trust.</p>
-  </div>
-
-  <div class="about-content">
-    <p>
-      Shosholoza Construction provides reliable and professional
-      construction services for homes, businesses and renovation
-      projects throughout Cape Town.
-    </p>
-
-    <br>
-
-    <p>
-      Our experienced team focuses on quality workmanship, attention
-      to detail, reliable service and customer satisfaction.
-    </p>
-  </div>
+<h2 class="section-title">About Shosholoza Construction</h2>
+<p class="section-text" style="color:#ddd">
+Shosholoza Construction is a Cape Town based construction service provider
+committed to quality workmanship, reliable service and customer satisfaction.
+From building and carpentry to painting, tiling, plumbing and roofing,
+we help turn your property ideas into reality.
+</p>
 </section>
 
-<section class="services" id="services">
-  <div class="section-title">
-    <h2>Our Services</h2>
-    <p>Professional services for your construction needs</p>
-  </div>
+<section id="projects">
+<h2 class="section-title">Our Work</h2>
+<p class="section-text">A selection of construction and property improvement work.</p>
 
-  <div class="service-grid">
-
-    <div class="service">
-      <div class="icon">🏠</div>
-      <h3>Building</h3>
-      <p>House construction, extensions and general building work.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🪚</div>
-      <h3>Carpentry</h3>
-      <p>Professional woodwork, doors, ceilings and custom carpentry.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🧱</div>
-      <h3>Plastering</h3>
-      <p>Quality plastering for smooth and durable walls.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">✨</div>
-      <h3>Skimming</h3>
-      <p>Professional wall skimming and smooth finishing.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🌳</div>
-      <h3>Decking</h3>
-      <p>Beautiful outdoor decking installation and repairs.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">⚡</div>
-      <h3>Electrical Work</h3>
-      <p>Electrical installation, repairs and maintenance.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🚿</div>
-      <h3>Plumbing</h3>
-      <p>Plumbing installation, repairs and maintenance.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🔲</div>
-      <h3>Tiling</h3>
-      <p>Floor and wall tiling for homes and commercial spaces.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🎨</div>
-      <h3>Painting</h3>
-      <p>Interior and exterior painting with quality finishes.</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🏗️</div>
-      <h3>Roofing</h3>
-      <p>Roof installation, maintenance and repairs.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="projects" id="projects">
-  <div class="section-title">
-    <h2>Our Work</h2>
-    <p>Quality workmanship for every project</p>
-  </div>
-
-  <div class="gallery">
-
-    <img
-      src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80"
-      alt="Construction project">
-
-    <img
-      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80"
-      alt="Building construction">
-
-    <img
-      src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80"
-      alt="Painting work">
-
-    <img
-      src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80"
-      alt="Modern construction">
-
-    <img
-      src="https://images.unsplash.com/photo-1531835551805-16d864c8d311?auto=format&fit=crop&w=900&q=80"
-      alt="Construction workers">
-
-    <img
-      src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80"
-      alt="Building work">
-
-  </div>
-</section>
-
-<section class="why">
-  <div class="section-title">
-    <h2 style="color:white;">Why Choose Us?</h2>
-    <p style="color:#ccc;">Your project is important to us.</p>
-  </div>
-
-  <div class="why-grid">
-
-    <div class="why-box">
-      <h3>Quality Work</h3>
-      <p>We take pride in delivering quality workmanship.</p>
-    </div>
-
-    <div class="why-box">
-      <h3>Reliable Service</h3>
-      <p>We aim to complete every project professionally and on time.</p>
-    </div>
-
-    <div class="why-box">
-      <h3>Professional Team</h3>
-      <p>Our team is committed to excellent customer service.</p>
-    </div>
-
-    <div class="why-box">
-      <h3>Affordable Solutions</h3>
-      <p>We provide practical construction solutions for different budgets.</p>
-    </div>
-
-  </div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80" alt="Construction project">
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80" alt="Construction workers">
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80" alt="House construction">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80" alt="Interior project">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80" alt="Building interior">
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80" alt="Renovation project">
+</div>
 </section>
 
 <section class="contact" id="contact">
-  <div class="section-title">
-    <h2>Contact Us</h2>
-    <p>Let's discuss your next construction project.</p>
-  </div>
+<h2 class="section-title">Contact Us</h2>
+<p class="section-text">Ready to start your project? Contact Shosholoza Construction today.</p>
 
-  <div class="contact-grid">
+<div class="contact-box">
+<div class="contact-item">
+<strong>📱 WhatsApp / Phone</strong>
+<a href="https://wa.me/27849139531" target="_blank">084 913 9531</a>
+</div>
 
-    <div class="contact-card">
-      <h3>📱 WhatsApp</h3>
-      <p>Speak to us directly on WhatsApp.</p>
+<div class="contact-item">
+<strong>📍 Address</strong>
+14–36 Vilakazi Road, Masiphumelele, Side 5,<br>
+Fish Hoek, Cape Town, Western Cape, South Africa
+</div>
 
-      <a href="https://wa.me/27849139531" target="_blank">
-        +27 84 913 9531
-      </a>
-
-      <br><br>
-
-      <a class="btn" href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction%2C%20I%20would%20like%20a%20quote." target="_blank">
-        Request a Quote
-      </a>
-    </div>
-
-    <div class="contact-card">
-      <h3>📍 Location</h3>
-
-      <p>
-        14–36 Vilakazi Road,<br>
-        Masiphumelele, Side 5,<br>
-        Fish Hoek,<br>
-        Cape Town,<br>
-        Western Cape,<br>
-        South Africa
-      </p>
-    </div>
-
-    <div class="contact-card">
-      <h3>🏗️ Get a Quote</h3>
-
-      <p>
-        Contact Shosholoza Construction today for a quotation
-        for your building, renovation or maintenance project.
-      </p>
-
-      <br>
-
-      <a class="btn" href="https://wa.me/27849139531" target="_blank">
-        Contact Us on WhatsApp
-      </a>
-    </div>
-
-  </div>
+<div class="contact-item">
+<strong>💬 Request a Quote</strong>
+<a class="btn" href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction%2C%20I%20would%20like%20a%20quotation." target="_blank">Message Us on WhatsApp</a>
+</div>
+</div>
 </section>
 
 <footer>
-  <p>
-    © 2026 Shosholoza Construction. All Rights Reserved.
-  </p>
-
-  <p>
-    Cape Town, Western Cape, South Africa
-  </p>
+<p><strong>Shosholoza Construction</strong></p>
+<p>Quality Construction & Building Services in Cape Town</p>
+<p>© 2026 Shosholoza Construction. All Rights Reserved.</p>
 </footer>
 
-<a
-  class="whatsapp"
-  href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction%2C%20I%20would%20like%20more%20information."
-  target="_blank"
-  aria-label="Contact Shosholoza Construction on WhatsApp">
-  💬
-</a>
+<a class="whatsapp" href="https://wa.me/27849139531?text=Hello%20Shosholoza%20Construction%2C%20I%20need%20your%20services." target="_blank" aria-label="WhatsApp">☏</a>
 
 </body>
 </html>
-Chinhu chakakosha: paWhatsApp link ndashandisa +27 84 913 9531, saka 0849139531 inoshanda seSouth Africa WhatsApp number.
-Kana maisa code iyi paGitHub, Commit changes wobva waenda kuGitHub Pages.
